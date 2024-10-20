@@ -13,41 +13,16 @@
         <div class="container">
             <div class="testimonial-inner center-block text-center">
                 <div id="owl-testimonial" class="owl-carousel">
-                    <div class="item">
-                        <blockquote>
-                            <p>
-                                Partnering with DGI Investama has been a transformative experience for our business.
-                                Their strategic insights and global reach have allowed us to scale faster than we ever
-                                imagined. DGI’s team truly understands the value of innovation and long-term growth.
-                            </p>
-                            <footer>
-                                Alex Pratama, CEO of Greenery Energy
-                            </footer>
-                        </blockquote>
-                    </div>
-                    <div class="item">
-                        <blockquote>
-                            <p>
-                                DGI Investama is fantastic! Their private investment services are exceptional. The
-                                team's professionalism and dedication made the process smooth and stress-free. Thank
-                                you, DGI Investama!
-                            </p>
-                            <footer>
-                                Liam
-                            </footer>
-                        </blockquote>
-                    </div>
-                    <div class="item">
-                        <blockquote>
-                            <p>
-                                DGI Investama is phenomenal! Their private investment expertise is top-tier. The team's
-                                professionalism and dedication made everything effortless. Thank you, DGI Investama!.
-                            </p>
-                            <footer>
-                                Olivia
-                            </footer>
-                        </blockquote>
-                    </div>
+                    @foreach ($dataTesti as $item)
+                        <div class="item">
+                            <blockquote>
+                                <p>{!! $item->testimoni !!}</p>
+                                <footer>
+                                    {{ $item->name }}
+                                </footer>
+                            </blockquote>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>

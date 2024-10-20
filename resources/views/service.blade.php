@@ -12,34 +12,59 @@
     <!-- End page header-->
 
     <!-- Begin services -->
-    <div class="text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-sm-6 wow fadeIn" data-wow-delay="0">
-                    <img class="image-product" src="{{ asset('assets/img/finance-4858797_1920.jpg') }}" alt="">
-                    <div class="services-info">
-                        <h4>Capital Investment</h4>
-                        <p>
-                            DGI Investama partners with forward-thinking startups and early-stage businesses,
-                            providing the resources they need to accelerate growth and bring breakthrough
-                            innovations to market. We seek out disruptive ideas and visionary entrepreneurs, helping
-                            them transform industries.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6 wow fadeIn" data-wow-delay="0">
-                    <img class="image-product" src="{{ asset('assets/img/finance-4858797_1920.jpg') }}" alt="">
-                    <div class="services-info">
-                        <h4>Strategic Partnerships</h4>
-                        <p>
-                            We believe in the power of collaboration. Through strategic partnerships, we work closely
-                            with businesses, offering not just funding, but also access to our global network, industry
-                            insights, and operational expertise to drive exponential growth.
-                        </p>
-                    </div>
-                </div>
-            </div> <!-- /.row -->
-        </div> <!-- /.container -->
-    </div>
+
+    @foreach ($dataService as $item)
+        @if ($loop->iteration % 2 == 0)
+            {{-- ini buat dari kiri ke kanan --}}
+            <div class="product wow fadeInLeft" data-wow-delay="0.4s">
+                <div class="container">
+                    <div class="row">
+                        <!-- Gambar untuk mobile (disembunyikan di desktop) -->
+                        <div class="col-md-6 text-center visible-xs">
+                            <img class="image-product" src="{{ asset('assets/img/service/' . $item->image) }}"
+                                alt="">
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="product-form">
+                                <h4>{{ $item->title }}</h4>
+                                <p>
+                                    {{ $item->description }}
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Gambar untuk desktop (disembunyikan di mobile) -->
+                        <div class="col-md-6 text-center hidden-xs">
+                            <img class="image-product" src="{{ asset('assets/img/service/' . $item->image) }}"
+                                alt="">
+                        </div>
+
+                    </div> <!-- /.row -->
+                </div> <!-- /.container -->
+            </div>
+        @else
+            {{-- ini buat dari kanan ke kiri --}}
+            <div class="product wow fadeInRight" data-wow-delay="0.4s">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 text-center">
+                            <img class="image-product" src="{{ asset('assets/img/service/' . $item->image) }}"
+                                alt="">
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="product-form">
+                                <h4>{{ $item->title }}</h4>
+                                <p>
+                                    {{ $item->description }}
+                                </p>
+                            </div>
+                        </div>
+                    </div> <!-- /.row -->
+                </div> <!-- /.container -->
+            </div>
+        @endif
+    @endforeach
+    <!-- End Services -->
 </section>
-<!-- End Services -->

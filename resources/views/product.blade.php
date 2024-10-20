@@ -12,53 +12,58 @@
     </div>
     <!-- End page header-->
 
-    <div class="product wow fadeInRight mb-3" data-wow-delay="0.4s">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center">
-                    <img class="image-product" src="{{ asset('assets/img/finance-4858797_1920.jpg') }}" alt="">
-                </div>
+    @foreach ($dataProduct as $item)
+        @if ($loop->iteration % 2 == 0)
+            {{-- ini buat dari kiri ke kanan --}}
+            <div class="product wow fadeInLeft" data-wow-delay="0.4s">
+                <div class="container">
+                    <div class="row">
+                        <!-- Gambar untuk mobile (disembunyikan di desktop) -->
+                        <div class="col-md-6 text-center visible-xs">
+                            <img class="image-product" src="{{ asset('assets/img/product/' . $item->image) }}"
+                                alt="">
+                        </div>
 
-                <div class="col-md-6">
-                    <div class="product-form">
-                        <h4>Innovation-Focused Investments</h4>
-                        <p>
-                            We invest in industries that are shaping the future. From technology and renewable energy to
-                            infrastructure and real estate, our portfolio is built around sectors that are driving
-                            innovation and creating long-term value.
-                        </p>
-                    </div>
-                </div>
-            </div> <!-- /.row -->
-        </div> <!-- /.container -->
-    </div>
+                        <div class="col-md-6">
+                            <div class="product-form">
+                                <h4>{{ $item->title }}</h4>
+                                <p>
+                                    {{ $item->description }}
+                                </p>
+                            </div>
+                        </div>
 
-    <div class="product wow fadeInLeft" data-wow-delay="0.4s">
-        <div class="container">
-            <div class="row">
+                        <!-- Gambar untuk desktop (disembunyikan di mobile) -->
+                        <div class="col-md-6 text-center hidden-xs">
+                            <img class="image-product" src="{{ asset('assets/img/product/' . $item->image) }}"
+                                alt="">
+                        </div>
 
-                <!-- Gambar untuk mobile (disembunyikan di desktop) -->
-                <div class="col-md-6 text-center visible-xs">
-                    <img class="image-product" src="{{ asset('assets/img/finance-4858797_1920.jpg') }}" alt="">
-                </div>
+                    </div> <!-- /.row -->
+                </div> <!-- /.container -->
+            </div>
+        @else
+            {{-- ini buat dari kanan ke kiri --}}
+            <div class="product wow fadeInRight" data-wow-delay="0.4s">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 text-center">
+                            <img class="image-product" src="{{ asset('assets/img/product/' . $item->image) }}"
+                                alt="">
+                        </div>
 
-                <div class="col-md-6">
-                    <div class="product-form">
-                        <h4>Investment Portfolio Analysis</h4>
-                        <p>
-                            Provided a comprehensive analysis of investment portfolios for a private investment firm.
-                            Highlighted opportunities and risks, ensuring sustainable impacts.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Gambar untuk desktop (disembunyikan di mobile) -->
-                <div class="col-md-6 text-center hidden-xs">
-                    <img class="image-product" src="{{ asset('assets/img/finance-4858797_1920.jpg') }}" alt="">
-                </div>
-
-            </div> <!-- /.row -->
-        </div> <!-- /.container -->
-    </div>
+                        <div class="col-md-6">
+                            <div class="product-form">
+                                <h4>{{ $item->title }}</h4>
+                                <p>
+                                    {{ $item->description }}
+                                </p>
+                            </div>
+                        </div>
+                    </div> <!-- /.row -->
+                </div> <!-- /.container -->
+            </div>
+        @endif
+    @endforeach
 </section>
 <!-- End product -->

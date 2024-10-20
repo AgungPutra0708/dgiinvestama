@@ -12,13 +12,11 @@
     <!-- End page header-->
     <div class="container">
         <div id="owl-partners" class="owl-carousel">
-            <img src="{{ asset('assets/img/partners/1.png') }}" alt="img">
-            <img src="{{ asset('assets/img/partners/2.png') }}" alt="img">
-            <img src="{{ asset('assets/img/partners/3.png') }}" alt="img">
-            <img src="{{ asset('assets/img/partners/4.png') }}" alt="img">
-            <img src="{{ asset('assets/img/partners/5.png') }}" alt="img">
-            <img src="{{ asset('assets/img/partners/6.png') }}" alt="img">
-            <img src="{{ asset('assets/img/partners/7.png') }}" alt="img">
+            @foreach ($dataPartner as $item)
+                <a href="{!! $item->link !!}" target="_blank">
+                    <img src="{{ asset('assets/img/partners/' . $item->image) }}" alt="img">
+                </a>
+            @endforeach
         </div>
     </div>
 </section>

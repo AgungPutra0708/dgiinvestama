@@ -446,10 +446,15 @@ a.rotate-box-2:hover {
     background-color: #fff3f3;
     padding: 50px 10px;
 }
+.product {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}
 .image-product {
     width: 100%;
     border-radius: 5px !important; /* Sudut gambar menjadi melengkung */
     max-width: 500px;
+    margin-bottom: 1rem !important;
 }
 /* ===== End product ===== */
 
@@ -1130,7 +1135,6 @@ p.subtitle {
     transform: rotate(45deg);
 }
 .scrolltotop .fa {
-    padding-left: 4px;
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
