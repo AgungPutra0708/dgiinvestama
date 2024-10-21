@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\about;
 use App\Models\contact;
+use App\Models\faq;
 use App\Models\home;
 use App\Models\partner;
 use App\Models\product;
@@ -26,6 +27,7 @@ class HomeController extends Controller
             'dataTesti' => testimoni::all(),
             'dataPartner' => partner::all(),
             'dataContact' => contact::all(),
+            'dataFaq' => faq::all(),
         ];
         return view('template.index', $data);
     }

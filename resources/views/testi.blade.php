@@ -6,6 +6,7 @@
             <div class="container">
                 <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
                     <h2>Trusted by Leading Businesses</h2>
+                    <div class="devider"></div>
                 </div>
             </div>
         </div>

@@ -16,6 +16,8 @@
     <!-- Body font -->
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
     <!-- Navbar font -->
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700,500' rel='stylesheet' type='text/css'>
+    <!-- Header font -->
 
     <!-- Libs and Plugins CSS -->
     <link rel="stylesheet" href="{{ asset('assets/inc/bootstrap/css/bootstrap.min.css') }}">
@@ -52,6 +54,8 @@
         @include('testi')
 
         @include('partner')
+
+        @include('faq')
 
         @include('contact')
 

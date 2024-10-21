@@ -22,7 +22,7 @@ body .body {
 .page {
     overflow: hidden;
     background-color: #fff;
-    padding: 50px 10px;
+    padding: 50px 30px;
 }
 * {
     border-radius: 0 !important;
@@ -44,12 +44,12 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Ubuntu", sans-serif;
     font-weight: 700;
     margin-bottom: 10px;
 }
 h1 {
-    font-size: 36px;
+    font-size: 45px;
 }
 h2 {
     font-size: 30px;
@@ -64,7 +64,7 @@ h5 {
     font-size: 18px;
 }
 p {
-    font: 14px/1.5em "Open Sans";
+    font: 17px/1.5em "Open Sans";
 }
 .navbar-nav > li > a {
     font-family: "Lato", Helvetica, Arial, sans-serif;
@@ -175,8 +175,12 @@ section {
     padding: 24px 0;
     margin-left: 25px;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
+}
+
+.navbar-right {
+    margin-right: 0px !important;
 }
 
 /* Navbar dropdown */
@@ -353,9 +357,9 @@ a.rotate-box-2:hover {
 }
 .rotate-box-1.square-icon .rotate-box-icon,
 .rotate-box-2.square-icon .rotate-box-icon {
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
+    width: 90px;
+    height: 90px;
+    line-height: 100px;
     color: #fff !important;
     font-size: 18px;
     -webkit-transform: rotate(45deg);
@@ -413,7 +417,7 @@ a.rotate-box-2:hover {
     font-weight: 400;
 }
 .rotate-box-1 p {
-    padding: 0 10px;
+    padding: 0 55px;
 }
 .rotate-box-1 .rotate-box-info {
     padding-left: 60px;
@@ -445,21 +449,27 @@ a.rotate-box-2:hover {
 }
 /* End rotate box-2 */
 
+/* ===== Begin about ===== */
+#about-section {
+    min-height: 90vh;
+}
+/* End about */
 /* ===== Begin product ===== */
 .page2 {
     overflow: hidden;
     background-color: #f0f0f0;
-    padding: 50px 10px;
+    padding: 50px 30px;
 }
 .product {
     margin-top: 1rem !important;
     margin-bottom: 1rem !important;
+    min-height: 90vh;
 }
 .image-product {
     width: 100%;
     border-radius: 5px !important; /* Sudut gambar menjadi melengkung */
-    max-width: 500px;
     margin-bottom: 1rem !important;
+    max-width: 650px;
 }
 /* ===== End product ===== */
 
@@ -863,6 +873,8 @@ ul.contact-address {
     margin: 15px 0;
 }
 ul.contact-address li {
+    display: flex; /* Gunakan Flexbox untuk menyusun ikon dan teks */
+    align-items: center; /* Menyelaraskan ikon dan teks secara vertikal */
     padding: 0 0 20px;
     margin: 0;
 }
@@ -871,6 +883,10 @@ ul.contact-address li:last-child {
 }
 ul.contact-address li i {
     margin-right: 10px;
+    font-size: 18px;
+}
+ul.contact-address li p {
+    margin: 0; /* Hilangkan margin default pada teks */
 }
 /* ===== End contact ===== */
 
@@ -1146,3 +1162,45 @@ p.subtitle {
     transform: rotate(-45deg);
 }
 /* ===== End buttons ===== */
+/* Ensure the card has rounded corners */
+.card-faq {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    width: 100%;
+    border-radius: 8px !important;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.card-header {
+    cursor: pointer;
+    padding: 15px;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px !important;
+}
+
+/* Adjust the border-radius when collapse is opened */
+.collapse {
+    border-radius: 0 0 8px 8px !important;
+}
+
+.caret {
+    transition: transform 0.3s ease;
+    float: right;
+    margin-top: -20px;
+    border-top: 7px solid;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+}
+
+.card-faq .collapse ul {
+    white-space: normal !important;
+    word-wrap: break-word !important;
+}
+
+/* Rotate the caret when collapse is open */
+.collapse.in + .card-header .caret {
+    transform: rotate(180deg);
+}

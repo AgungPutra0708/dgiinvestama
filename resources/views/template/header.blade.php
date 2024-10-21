@@ -5,7 +5,7 @@
     <nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
         <!-- Classes: navbar-default, navbar-inverse, navbar-fixed-top, navbar-fixed-bottom, navbar-transparent. Note: If you use non-transparent navbar, set "height: 98px;" to #header -->
 
-        <div class="container">
+        <div class="container-fluid">
 
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -29,7 +29,7 @@
                     <li><a class="page-scroll" href="#contact-section">Contact</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
-        </div><!-- /.container -->
+        </div><!-- /.container-fluid -->
     </nav>
     <!-- End Navbar -->
 
