@@ -1,48 +1,49 @@
 a,
 a:hover,
 a:focus {
-    color: #302e2e;
+    color: #4d4d4d; /* Abu-abu gelap untuk link */
 }
 
 /* === Navbar === */
 .navbar-default .navbar-brand,
 .navbar-default .navbar-brand:focus {
-    color: #000000;
+    color: #333333; /* Abu-abu gelap untuk brand */
 }
 .navbar-default .navbar-brand:hover {
-    color: #000000;
+    color: #666666; /* Abu-abu sedikit lebih terang untuk hover */
 }
 .navbar-default,
 .navbar-default.navbar-fixed-top.navbar-shrink {
-    background-color: #ffffff;
+    background-color: #ffffff; /* Latar belakang abu-abu terang */
 }
 .navbar-default .navbar-nav > li > a {
-    color: #302e2e;
+    color: #4d4d4d; /* Warna abu-abu gelap untuk item navbar */
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-nav > li.active > a,
 .navbar-default .navbar-nav > .active > a {
-    color: #000000 !important;
+    color: #000000 !important; /* Warna abu-abu gelap saat aktif atau hover */
 }
 .navbar-default.navbar-fixed-top.navbar-shrink .navbar-nav > li > a {
-    color: #a9a9a9;
+    color: #666666; /* Warna abu-abu sedang saat navbar shrink */
 }
 .navbar-default.navbar-shrink .navbar-nav > li > a:hover,
 .navbar-default.navbar-shrink .navbar-nav > li > a:focus,
 .navbar-default.navbar-shrink .navbar-nav > li.active > a {
-    color: #fff;
+    color: #333333; /* Warna abu-abu lebih gelap saat shrink dan hover */
 }
 .navbar-default.navbar-shrink .navbar-nav > li.active > a {
-    -webkit-box-shadow: inset 0 3px #fff !important;
-    -moz-box-shadow: inset 0 3px #fff !important;
-    box-shadow: inset 0 3px #fff !important;
+    -webkit-box-shadow: inset 0 3px #333333 !important;
+    -moz-box-shadow: inset 0 3px #333333 !important;
+    box-shadow: inset 0 3px #333333 !important; /* Efek shadow abu-abu gelap */
 }
 .navbar-default .dropdown-menu {
-    border: 1px solid #fff;
-    border-top: 2px solid #fff;
-    -webkit-box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08);
+    background-color: #e0e0e0; /* Latar belakang dropdown abu-abu terang */
+    border: 1px solid #d0d0d0;
+    border-top: 2px solid #d0d0d0;
+    -webkit-box-shadow: 0 6px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.05); /* Sedikit shadow */
 }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus,
@@ -50,12 +51,12 @@ a:focus {
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
-    color: #ffff;
+    color: #333333; /* Warna abu-abu gelap saat aktif atau hover */
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-    color: #fff;
+    color: #333333; /* Abu-abu gelap untuk dropdown open state */
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
@@ -65,61 +66,65 @@ a:focus {
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-nav > li.active > a {
+    color: #333333; /* Abu-abu lebih gelap saat hover */
 }
+
 /* Navbar inverse */
 .navbar-inverse {
-    background-color: #111;
-    color: #ccc;
+    background-color: #2f2f2f; /* Latar belakang abu-abu tua */
+    color: #b0b0b0; /* Warna teks abu-abu terang */
 }
 .navbar-inverse .navbar-brand {
-    color: #ccc;
+    color: #b0b0b0; /* Abu-abu terang untuk brand */
 }
 .navbar-inverse .navbar-nav > li > a {
-    color: #ccc;
+    color: #b0b0b0; /* Warna teks abu-abu terang */
 }
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
     background-color: transparent;
-    color: #111;
+    color: #f0f0f0; /* Warna putih terang saat aktif */
 }
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus,
 .navbar-inverse .navbar-nav > li.active > a {
-    color: #111;
+    color: #f0f0f0; /* Warna putih terang saat hover */
 }
+
 /* Navbar inverse dropdown */
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {
-    color: #111;
+    color: #f0f0f0; /* Warna putih terang saat dropdown open */
 }
 .navbar-inverse .dropdown-menu {
-    background-color: #1f1f1f;
-    border: 1px solid #111;
-    border-top: 2px solid #111;
+    background-color: #3f3f3f; /* Latar belakang dropdown abu-abu tua */
+    border: 1px solid #2f2f2f;
+    border-top: 2px solid #2f2f2f;
 }
 .navbar-inverse .dropdown-menu > li > a {
-    color: #ccc;
+    color: #b0b0b0; /* Warna teks dropdown abu-abu terang */
 }
 .navbar-inverse .dropdown-menu > li > a:hover,
 .navbar-inverse .dropdown-menu > li > a:focus {
-    color: #111;
-}
-/* Navbar fixed */
-.navbar-default.navbar-fixed-top.navbar-shrink .navbar-brand {
-    color: #fff;
-}
-.navbar-default.navbar-fixed-top.navbar-shrink .navbar-brand:hover {
-    color: #111;
-}
-/* Navbar fixed inverse */
-.navbar-inverse.navbar-fixed-top.navbar-shrink {
-    background-color: #111;
+    color: #f0f0f0; /* Warna teks putih saat hover */
 }
 
+/* Navbar fixed */
+.navbar-default.navbar-fixed-top.navbar-shrink .navbar-brand {
+    color: #333333; /* Abu-abu gelap saat shrink */
+}
+.navbar-default.navbar-fixed-top.navbar-shrink .navbar-brand:hover {
+    color: #4d4d4d; /* Warna abu-abu sedikit lebih terang saat hover */
+}
+
+/* Navbar fixed inverse */
+.navbar-inverse.navbar-fixed-top.navbar-shrink {
+    background-color: #2f2f2f; /* Latar belakang abu-abu tua */
+}
 .navbar-inverse.navbar-fixed-top.navbar-shrink .navbar-nav > li > a {
-    color: #ccc;
+    color: #b0b0b0; /* Abu-abu terang untuk teks saat shrink */
 }
 .navbar-inverse.navbar-fixed-top.navbar-shrink .navbar-nav > .active > a,
 .navbar-inverse.navbar-fixed-top.navbar-shrink .navbar-nav > .active > a:hover,
@@ -128,7 +133,7 @@ a:focus {
 .navbar-inverse.navbar-fixed-top.navbar-shrink .navbar-nav > li > a:focus,
 .navbar-inverse.navbar-fixed-top.navbar-shrink .navbar-nav > li.active > a {
     background-color: transparent;
-    color: #111;
+    color: #f0f0f0; /* Warna putih terang untuk teks saat hover/aktif */
 }
 
 .navbar-fixed-top.navbar-shrink .navbar-brand,
@@ -137,10 +142,10 @@ body.boxed
     .body
     .navbar-inverse.navbar-transparent.navbar-shrink
     .navbar-brand {
-    color: #ccc;
+    color: #b0b0b0; /* Abu-abu terang untuk brand */
 }
 .navbar-fixed-top.navbar-shrink .navbar-brand:hover {
-    color: #111;
+    color: #f0f0f0; /* Warna putih terang saat hover */
 }
 
 /* === Text Carousel === */

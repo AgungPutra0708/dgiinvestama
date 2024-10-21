@@ -20,7 +20,7 @@
                 <div class="container">
                     <div class="row">
                         <!-- Gambar untuk mobile (disembunyikan di desktop) -->
-                        <div class="col-md-6 text-center visible-xs">
+                        <div class="col-md-6 text-center visible-sm visible-xs">
                             <img class="image-product" src="{{ asset('assets/img/service/' . $item->image) }}"
                                 alt="">
                         </div>
@@ -35,7 +35,7 @@
                         </div>
 
                         <!-- Gambar untuk desktop (disembunyikan di mobile) -->
-                        <div class="col-md-6 text-center hidden-xs">
+                        <div class="col-md-6 text-center hidden-sm hidden-xs">
                             <img class="image-product" src="{{ asset('assets/img/service/' . $item->image) }}"
                                 alt="">
                         </div>

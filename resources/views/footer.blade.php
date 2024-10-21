@@ -4,7 +4,7 @@
         <div class="container text-center wow fadeIn" data-wow-delay="0.4s">
             <p class="copyright">
                 Copyright &copy; 2024 - Digitize Global Inovasi - Developed by <a href="https://putraagung.netlify.app/"
-                    class="theme-author" target="_blank">Putra Agung</a>
+                    class="theme-author font-weight-bold" target="_blank">Putra Agung</a>
             </p>
         </div>
     </div>
